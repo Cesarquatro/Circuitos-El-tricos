@@ -48,3 +48,14 @@ Xs = tf(num_d, den_d)
 figure(4)
 bode(Xs)
 
+%% e)   9(s² + 0.2s + 1)
+%     --------------------
+%       s(s² + 1.2s + 9)
+
+num_e = [9 1.8 9]; % 9 * [1 0.2 1]
+den_e = [1 1.2 9 0];  % s * [1 1.2 9]
+
+Js = tf(num_e, den_e)
+
+figure(5)
+bode(Js)
