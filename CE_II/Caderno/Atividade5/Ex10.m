@@ -59,3 +59,16 @@ Js = tf(num_e, den_e)
 
 figure(5)
 bode(Js)
+
+%% f)       1
+%     -------------
+%       s(s² + 1)
+
+num_f = [1]; 
+den_f = [1 1 0];  % s * [1 1]
+
+Ds = tf(num_f, den_f)
+
+figure(6)
+bode(Ds)
+
