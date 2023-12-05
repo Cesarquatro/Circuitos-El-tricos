@@ -72,3 +72,14 @@ Ds = tf(num_f, den_f)
 figure(6)
 bode(Ds)
 
+%% g)      2(s + 1)
+%     -------------------
+%       (s + 2)(s + 10)     =   s² - 12s + 20
+
+num_g = [2 2];    % 2 * [1 1]
+den_g = [1 -12 20];  % s * [1 1]
+
+Ls = tf(num_g, den_g)
+
+figure(7)
+bode(Ls)

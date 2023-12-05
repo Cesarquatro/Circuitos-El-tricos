@@ -53,9 +53,33 @@ bode(Xs)
 %       s(s² + 1.2s + 9)
 
 num_e = [9 1.8 9]; % 9 * [1 0.2 1]
-den_e = [1 1.2 9];  % s * [1 1.2 9]
+den_e = [1 1.2 9 0];  % s * [1 1.2 9]
 
-Xs = tf(num_e, den_e)
+Js = tf(num_e, den_e)
 
 figure(5)
-bode(Xs)
+bode(Js)
+
+%% f)       1
+%     -------------
+%       s(s² + 1)
+
+num_f = [1]; 
+den_f = [1 1 0];  % s * [1 1]
+
+Ds = tf(num_f, den_f)
+
+figure(6)
+bode(Ds)
+
+%% g)    2(s + 1)
+%     -------------
+%       (s + 2)(s + 10)
+
+num_g = [1]; 
+den_g = [1 1 0];  % s * [1 1]
+
+Ls = tf(num_g, den_g)
+
+figure(7)
+bode(Ls)
