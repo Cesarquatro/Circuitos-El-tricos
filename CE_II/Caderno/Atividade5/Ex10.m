@@ -16,7 +16,7 @@ bode(Cs)
 %     30----------------
 %         s² + 3s + 50
 
-num_b = [1 10];
+num_b = [30 300]; % 30 * [1 10]
 den_b = [1 3 50];
 
 Hs = tf(num_b, den_b)
@@ -24,14 +24,14 @@ Hs = tf(num_b, den_b)
 figure(2)
 bode(Hs)
 
-%% b)        s + 10
-%     30----------------
-%         s² + 3s + 50
+%% c)           s + 3
+%     10----------------------
+%         s³ + 3s² + 4s + 4
 
-num_b = [30 300];
-den_b = [1 3 50];
+num_c = [10 30]; % 10 * [1 3]
+den_c = [1 3 4 4];
 
-Hs = tf(num_b, den_b)
+Is = tf(num_c, den_c)
 
 figure(2)
-bode(Hs)
+bode(Is)
