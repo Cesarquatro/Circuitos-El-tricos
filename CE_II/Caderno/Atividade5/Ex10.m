@@ -33,5 +33,18 @@ den_c = [1 3 4 4];
 
 Is = tf(num_c, den_c)
 
-figure(2)
+figure(3)
 bode(Is)
+
+%% d)        25
+%     ----------------
+%       s² + 4s + 25
+
+num_d = [25]; % 30 * [1 10]
+den_d = [1 4 25];
+
+Xs = tf(num_d, den_d)
+
+figure(4)
+bode(Xs)
+
