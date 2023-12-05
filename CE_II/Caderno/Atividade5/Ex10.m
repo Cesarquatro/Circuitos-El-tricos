@@ -83,3 +83,15 @@ Ls = tf(num_g, den_g)
 
 figure(7)
 bode(Ls)
+
+%% h)          s
+%     -------------------
+%       (s + 2)²(s + 1)     =   s³ + 5s² 6s + 2
+
+num_h = [1 0];    
+den_h = [1 5 6 2];  
+
+Ks = tf(num_h, den_h)
+
+figure(8)
+bode(Ks)
